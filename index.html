@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/style/style.css">
     <title>Document</title>
 </head>
-
 <body>
     <div class="grid-container">
         <div class="grid-block">
             <strong>1. Высчитать дату Орозо Айт и Курман Айт.</strong>
-            <p>Курман Айт это дата Орозо Айта плюс 70 дней.</p>
-            <p>Орозо Айт в среднем каждый год сдвигается на 10 дней ранее. Например
-                если в этом году это 2 мая то в 2023 - 23 марта в 2024 - 13 марта</p>
-            <p>В input вводится год например: 2010, 2023, 2030. Валидные цифры это от
-                2000 до 2050 года. Остальные свалидируйте как неверные данные.</p>
-            <p>За точку отчета брать известную дату Орозо Айта прошлого года.</p>
-            <p>Не брать в расчет свдиги лунных календарей и т.д. т.п.</p>
-            <p>Использовать object Date для подсчета дат.</p>
-            <div class="blockrez">
-                <div class="block">
-                    <input id="inputYear" type="text" />
+            <ol>
+                <li>Курман Айт это дата Орозо Айта плюс 70 дней.</li>
+                <li>
+                    Орозо Айт в среднем каждый год сдвигается на 10 дней ранее. Например
+                    если в этом году это 2 мая то в 2023 - 23 марта в 2024 - 13 марта
+                </li>
+                <li>
+                    В input вводится год например: 2010, 2023, 2030. Валидные цифры это от
+                    2000 до 2050 года. Остальные свалидируйте как неверные данные.
+                </li>
+                <li>За точку отчета брать известную дату Орозо Айта прошлого года.</li>
+                <li>Не брать в расчет свдиги лунных календарей и т.д. т.п.</li>
+                <li>Использовать object Date для подсчета дат.</li>
+            </ol>
+            <div class="input-container">
+                <div class="input">
+                  <input id="inputYear" type="text" />
+                  <button id="btn" onclick="calcDate()">Проверить год</button>
                 </div>
-                <div class="block">
-                    <button id="btn" onclick="calcDate()">Проверить год</button>
-                </div>
-                <div id="result"></div>
-            </div>
+                <div id="result" class="result-container"></div>
+              </div>
             <div id="dataOrozo"></div>
         </div>
+    </div>
+    <div class="grid-container">
         <div class="grid-block">
             <strong>2. Currency exchange</strong>
             <p>Сынтегироваться с <a href="https://github.com/fawazahmed0/currency-api#readme">API</a> или любой другой
@@ -42,19 +46,14 @@
             <p>Показать текущий курс доллара к сому.</p>
             <p>В инпут ввожу сумму в долларах получаю результат в сомах по курсу которая отдает API.</p>
             <div id="data"></div>
-            <div class="blockrez">
-                <div class="block">
-                    <input id="inputSom" type="number">
-                </div>
-                <div class="block">
-                    <button id="buttonSom" onclick="renderKSGRate()">Сonversion</button>
-                </div>
+            <div>
+                <input id="inputSom" type="number">
+                <button id="buttonSom" onclick="conversionButton()">Сonversion</button>
+                <div id="resultData" class="result-container">Hello</div>
             </div>
-            <div  id="resultSom"></div>
         </div>
     </div>
     <script src="/js/app.js"></script>
     <script src="/js/orozo.js"></script>
 </body>
-
 </html>
