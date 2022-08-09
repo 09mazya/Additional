@@ -1,0 +1,21 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    border: 1px solid black;
+}
+.grid-block{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+}
+.myTable{
+    border: 1px solid black;
+}
