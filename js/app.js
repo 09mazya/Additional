@@ -1,4 +1,3 @@
-
 let apiUrlSom = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd/kgs.json';
 let SomContainer = document.getElementById('data');
 
@@ -12,6 +11,7 @@ export async function conversionF() {
         console.log(error);
     }
 }
+
 export async function renderKSGRate() {
     let rate = await conversionF();
     let summarez = document.getElementById('inputSom').value
@@ -26,4 +26,3 @@ export async function renderKSGRate() {
                         </div>`;
     renderKSGRate();
 };
-
