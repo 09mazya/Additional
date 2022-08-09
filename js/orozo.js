@@ -7,7 +7,7 @@ function calcDate() {
   let year = orInitPt.getFullYear();
   let month = orInitPt.getMonth();
   let day = orInitPt.getDate();
-  inputValue = document.getElementById("inputYear").value;
+  let inputValue = document.getElementById("inputYear").value;
 
   if ((inputValue < 2000 || inputValue > 2050) || isNaN(inputValue)) {
     document.getElementById("dataOrozo").style.color = 'red';
@@ -39,6 +39,8 @@ btn.addEventListener("click", function handleClick(event) {
   input.value = "";
 });
 
+export {calcDate};
+export let inputValue = document.getElementById("inputYear").value;
 
 
 
